@@ -50,6 +50,13 @@
                     </svg>
                     <span>New Patient Follow-up</span>
                 </div>
+                <div class="menu-item all-patients-menu" onclick="showPage('all-patients')">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span>All Patients</span>
+                    <span class="menu-badge">5</span>
+                </div>
                 <div class="menu-item" onclick="showPage('good-performance')">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -291,9 +298,45 @@
                             <button type="submit" class="btn btn-primary">Create Patient Record</button>
                         </div>
                     </form>
+                    <!-- Generated Patient ID Section -->
+                    <div class="generated-patient-id" id="generatedPatientId">
+                        <div class="generated-id-content">
+                            <div class="success-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3>Patient Record Created Successfully!</h3>
+                            <p>Your new patient has been registered with the following ID:</p>
+                            <div class="patient-id-display" id="patientIdDisplay"></div>
+                            <button class="btn btn-primary" onclick="copyPatientId()">Copy Patient ID</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+            <!-- All Patients Page -->
+            <div id="all-patients" class="page-content">
+                <div class="top-bar">
+                    <div>
+                        <h1 class="page-title">All Patients</h1>
+                        <p class="page-subtitle">View and manage all patient records</p>
+                    </div>
+                    <div class="top-actions">
+                        <button class="btn btn-secondary">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+                            </svg>
+                            Filter
+                        </button>
+                        <button class="btn btn-primary">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Export Report
+                        </button>
+                    </div>
+                </div>
+            </div>
             <!-- Other pages remain the same as before -->
             <!-- Good Performance Patients Page -->
             <div id="good-performance" class="page-content">
