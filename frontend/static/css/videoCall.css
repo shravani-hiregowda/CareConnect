@@ -1,0 +1,44 @@
+body {
+    background: #f4f8fc;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header h2 {
+    padding: 20px;
+    background: #005eff;
+    color: white;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+video {
+    width: 350px;
+    height: 240px;
+    background: #000;
+    border-radius: 10px;
+    border: 2px solid #005eff;
+}
+
+.primary-btn, .danger-btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: #005eff;
+    color: white;
+}
+
+.danger-btn {
+    background: #ff3b3b;
+    color: white;
+}

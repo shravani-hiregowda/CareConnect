@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Healthcare Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/static/images/icon.png">
+    <link rel="stylesheet" href="/frontend/static/css/homepage.css">
+    <!-- Add EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-icon">C</div>
+                    <div class="logo-text">CareConnect</div>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="btn btn-secondary">For Patients</button>
+                    <button class="btn btn-primary">For Nurses</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Connecting <span>Healthcare</span> Professionals with Patients</h1>
+                    <p class="hero-subtitle">CareConnect is a comprehensive platform that bridges the gap between healthcare providers and patients, ensuring seamless communication, monitoring, and follow-up care.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-user-md"></i>
+                            For Nurses
+                        </button>
+                        <button class="btn btn-secondary btn-large">
+                            <i class="fas fa-user-injured"></i>
+                            For Patients
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/frontend/static/images/careconnect.png" alt="Healthcare Professionals" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Our Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <h3 class="feature-title">Patient Documentation</h3>
+                    <p class="feature-description">Easily upload and manage patient documents with our intelligent form auto-fill technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Performance Tracking</h3>
+                    <p class="feature-description">Monitor patient recovery progress with detailed analytics and performance metrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Alerts</h3>
+                    <p class="feature-description">Receive timely notifications for patients requiring immediate attention or follow-up.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="feature-title">Secure Communication</h3>
+                    <p class="feature-description">Connect with patients through secure messaging and video consultations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Mobile Access</h3>
+                    <p class="feature-description">Access patient information and manage care from anywhere with our mobile app.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Data Security</h3>
+                    <p class="feature-description">Your patient data is protected with enterprise-grade security and encryption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">About CareConnect</h2>
+                    <p class="about-description">A post-discharge patient care platform. We recognized the challenges healthcare providers face in monitoring patient recovery after hospital discharge and the anxiety patients experience during this critical period.</p>
+                    <p class="about-description">Our platform brings together cutting-edge technology with healthcare expertise to create a seamless experience for both nurses and patients. We're committed to improving patient outcomes through better communication, monitoring, and timely interventions.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-value">Automated</div>
+                            <div class="stat-label">Post-Discharge Check-ins</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Personalized</div>
+                            <div class="stat-label">Recovery Tracking</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Timely</div>
+                            <div class="stat-label">Medication Reminders</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/frontend/static/images/careconnect2.png" alt="Healthcare Team" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="contact-title">Get In Touch</h2>
+                    <p class="contact-description">Have questions about CareConnect or want to learn how our platform can benefit your healthcare organization? Reach out to our team.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Our Location</h4>
+                                <p>Ward No.35, Ganesh Nagar, Siruguppa Rd, opp. to KSRTC Depot, Ashok Nagar, Rajeshwari nagar, Ballari, Karnataka 583103 </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p>+91 96205 69007</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Address</h4>
+                                <p>bbcclub15@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-status" id="form-status"></div>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="from_name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="from_email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CareConnect</h3>
+                    <p>Bridging the gap between healthcare providers and patients for better outcomes.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="/templates/nurse_login.html">For Nurses</a></li>
+                        <li><a href="/templates/patient_login.html">For Patients</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.x.com"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CareConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/frontend/static/js/homepage.js"></script>
+</body>
+</html>

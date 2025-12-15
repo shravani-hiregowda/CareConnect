@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CareConnect Virtual Doctor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/frontend/static/css/videoCall.css" />
+
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Load LiveKit UMD FIRST (NOT MODULE) -->
+    <script src="/frontend/static/js/livekit-loader.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h2>👨‍⚕️ Virtual Doctor Consultation</h2>
+    </header>
+
+    <main>
+        <div class="video-container">
+
+            <div>
+                <h3>You</h3>
+                <video id="localVideo" autoplay muted playsinline></video>
+            </div>
+
+            <div>
+                <h3>Doctor</h3>
+                <video id="remoteVideo" autoplay playsinline></video>
+            </div>
+
+        </div>
+
+        <button id="startCallBtn" class="primary-btn">Start Call</button>
+        <button id="leaveCallBtn" class="danger-btn" style="display:none;">End Call</button>
+    </main>
+
+    <!-- Load videoCall.js (NON-MODULE so it can access window.LiveKit) -->
+    <script src="/frontend/static/js/videoCall.js"></script>
+
+</body>
+</html>

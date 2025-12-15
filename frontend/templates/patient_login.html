@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect - Patient Portal Login</title>
+    <meta name="description" content="Empowering nurses with intelligent tools to provide exceptional post-discharge care. 24/7 patient monitoring, AI-powered insights, and secure communication.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/static/css/login_signup.css">
+    <link rel="icon" type="image/png" href="/static/images/icon.png">
+</head>
+<body>
+    <div class="medical-pattern">
+        <div class="medical-icon" style="top: 10%; left: 15%;">⚕️</div>
+        <div class="medical-icon" style="top: 70%; left: 5%; animation-delay: 2s;">💊</div>
+        <div class="medical-icon" style="top: 20%; right: 10%; animation-delay: 4s;">🏥</div>
+        <div class="medical-icon" style="bottom: 15%; right: 20%; animation-delay: 6s;">❤️</div>
+    </div>
+
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <div class="logo-icon">C</div>
+                <div class="logo-text">CareConnect</div>
+            </div>
+
+            <div class="form-container">
+                <!-- Sign In Form -->
+                <div id="signInForm" class="form active">
+                    <div class="form-header">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to continue to your dashboard</p>
+                    </div>
+
+                    <form onsubmit="handleSignIn(event)">
+                        <div class="input-group">
+                            <input type="text" id="signInPatientId" placeholder=" " required>
+                            <label for="signInPatientId">Patient ID</label>
+                            <span class="success-icon">✓</span>
+                            <span class="error-message">Valid Nurse ID is required</span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" id="signInPassword" placeholder=" " required>
+                            <label for="signInPassword">Password</label>
+                            <button type="button" class="password-toggle" onclick="togglePassword('signInPassword')">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="eye-open">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="eye-closed" style="display: none;">
+                                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                    <line x1="1" y1="1" x2="23" y2="23"/>
+                                </svg>
+                            </button>
+                            <span class="error-message">Password is required</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <h3>AI Post-Discharge Companion</h3>
+            <p>Empowering nurses with intelligent tools to provide exceptional post-discharge care and support.</p>
+
+            <ul class="feature-list">
+                <li>24/7 Patient Monitoring</li>
+                <li>AI-Powered Insights</li>
+                <li>Secure Communication</li>
+                <li>Smart Care Plans</li>
+            </ul>
+
+            <div class="illustration">
+                <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer pulse ring -->
+                    <circle cx="150" cy="150" r="120" fill="rgba(255,255,255,0.1)" opacity="0.5">
+                        <animate attributeName="r" values="120;135;120" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+
+                    <!-- Inner pulse ring -->
+                    <circle cx="150" cy="150" r="90" fill="rgba(255,255,255,0.15)" opacity="0.7">
+                        <animate attributeName="r" values="90;105;90" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+
+                    <!-- Heartbeat line -->
+                    <path d="M70 150 L110 150 L125 130 L145 170 L160 140 L180 150 L230 150" 
+                        stroke="white" stroke-width="6" stroke-linecap="round" fill="none">
+                        <animate attributeName="stroke-width" values="6;8;6" dur="1.8s" repeatCount="indefinite"/>
+                    </path>
+
+                    <!-- MUCH smaller follow-up bubble (10 → 13 pulse) -->
+                    <circle cx="150" cy="120" r="10" fill="white" opacity="0.95">
+                        <animate attributeName="r" values="10;13;10" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+
+                    <!-- Smaller, perfectly centered checkmark -->
+                    <path d="M147.5 120 L149.5 122.5 L153 117.5"
+                        stroke="#34A853" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+                    <!-- Progress ring -->
+                    <circle cx="150" cy="150" r="65" stroke="white" stroke-width="4" stroke-opacity="0.5" fill="none">
+                        <animate attributeName="stroke-opacity" values="0.5;0.9;0.5" dur="2.2s" repeatCount="indefinite"/>
+                    </circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script src="/frontend/static/js/patient_login.js"></script>
+</body>
+</html>

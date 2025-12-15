@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "livekit-client": "github:livekit/client-sdk-js"
+  }
+}
